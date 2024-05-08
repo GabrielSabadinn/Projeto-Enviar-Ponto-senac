@@ -1,0 +1,13 @@
+Para executar o front-end: Npm i na pasta do front_ponto em seguida para iniciar o projeto
+"npm run dev" abrir no navegador "http://localhost:5173/Login"
+
+Para executar o back npm i na pasta back, em seguida execute no pgadmin4 os comandos que deixamos salvo
+dentro da pasta back, lembre-se que na hora de crirar é importante que use as mesmas credenciais que usamos
+
+  user: 'postgres',
+  host: 'localhost',
+  database: 'registro_ponto',
+  password: 'admin',
+  port: 5432,
+
+e para executar node script.js

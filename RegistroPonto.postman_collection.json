@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "b3f35cbf-836c-4477-aa8f-40f424315f69",
+		"name": "RegistroPonto",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26104665",
+		"_collection_link": "https://devs-senac.postman.co/workspace/Devs-Senac-Workspace~f768b20b-2ea4-4d02-abaf-7cab197f54a9/collection/26104665-b3f35cbf-836c-4477-aa8f-40f424315f69?action=share&source=collection_link&creator=26104665"
+	},
+	"item": [
+		{
+			"name": "CadastrarUsuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Pietro Fiori\",\r\n    \"email\": \"pietro0811@gmail.com\",\r\n    \"cpf\": \"85019780006\",\r\n    \"senha\": \"admin\",\r\n    \"data_nascimento\": \"2003-08-11\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/registroUsuario/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"registroUsuario",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cadastroPonto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"usuario_id\": 3,\r\n    \"data_entrada\": \"2024-04-25T08:00:00\",\r\n    \"data_intervalo\": \"2024-04-25T12:00:00\",\r\n    \"data_fim_intervalo\": \"2024-04-25T13:00:00\",\r\n    \"data_saida\": \"2024-04-25T17:00:00\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/ponto/cadastrar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"ponto",
+						"cadastrar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"pietro0811@gmail.com\",\r\n    \"senha\": \"admin\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ConsultaPonto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/ponto/consultar/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"ponto",
+						"consultar",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ExcluirPonto",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/ponto/excluir/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"ponto",
+						"excluir",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
